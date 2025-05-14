@@ -14,7 +14,6 @@
     top: 10%;
     height: 80vh;
     border-radius:  0% 0% 110% 110%/0% 0% 15% 15%;
-    z-index: -1;
 }
 
 .section-advantages__slogan {
