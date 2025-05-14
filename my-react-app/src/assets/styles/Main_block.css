@@ -1,0 +1,100 @@
+.image-container {
+    position: relative;
+    max-width: 787.74px;
+    width: 60%;
+    height: auto;
+    display: flex;
+    top: -20%;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.main-block__container {
+    flex: 1; /* Позволяет контейнеру занимать оставшееся пространство */
+    padding-right: 20px; /* Отступ справа для текста */
+}
+
+.main-block__img{
+    width: 100%;
+    height: auto;
+}
+
+.main-block {
+    padding-left: 81px;
+    display: flex;
+	background: #F4F6F9;
+	align-items: center;
+	justify-content: space-between;
+    width: auto;
+    height: 550px;
+    border-radius:  0% 0% 160% 160%/0% 0% 60% 60%;
+}
+
+.container__slogan-img {
+    width: 481.16px;
+    height: 122.64px;
+    margin: 0 20px 24px 0;
+}
+
+.container__text {
+    margin: 20px 0; /* Отступы для текста */
+}
+
+.container__button {
+    padding: 10px 20px; /* Отступы для кнопки */
+}
+
+@media only screen and (max-width: 1024px) {
+    .main-block__container {
+        height: auto;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+    .main-block {
+        padding-left: 40px; /* Уменьшаем отступы */
+        height: auto; /* Автоматическая высота */
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: center; /* Центрируем содержимое */
+    }
+    
+    .image-container {
+        display: none;
+    }
+
+    .container__slogan-img {
+        width: 100%; /* Увеличиваем ширину изображения слогана */
+        height: auto; /* Автоматическая высота */
+        margin: 0 auto;
+    }
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    .main-block {
+        padding-left: 20px; /* Уменьшаем отступы */
+        height: auto; /* Автоматическая высота */
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: center; /* Центрируем содержимое */
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    .container__slogan-img {
+        width: 80%; /* Уменьшаем ширину изображения слогана */
+        height: auto; /* Автоматическая высота */
+    }
+
+    .container__text {
+        text-align: center; /* Центрируем текст */
+        font-size: 10pt;;
+    }
+
+    .container__button {
+        width: 100%; /* Кнопка занимает всю ширину */
+        margin-top: 10px; /* Отступ сверху */
+    }
+}

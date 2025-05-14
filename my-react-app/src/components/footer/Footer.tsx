@@ -1,8 +1,10 @@
+import '../../assets/styles/Footer.css'
+
 export const Footer = () => {
     return (
         <footer className="footer">
         <div className="copyright">
-            <img src="img/header/logo.svg" alt="" className="copyright__logo" />
+            <img src="./public/images/header/logo.svg" alt="" className="copyright__logo" />
             <p className="copyright__text">2021 Splice.com All Rights Reserved</p>
         </div>
         <div className="links">
@@ -66,10 +68,10 @@ export const Footer = () => {
         <div className="socials">
             <h2 className="column__h">FIND US ON SOCIAL</h2>
             <div className="socials_imgs">
-                <img src="img/facebook.svg" alt="" className="socials__item"/>
-                <img src="img/twitter.svg" alt="" className="socials__item"/>
-                <img src="img/instagram.svg" alt="" className="socials__item"/>
-                <img src="img/YouTube.svg" alt="" className="socials__item"/>
+                <img src="./public/images/facebook.svg" alt="" className="socials__item"/>
+                <img src="./public/images/twitter.svg" alt="" className="socials__item"/>
+                <img src="./public/images/instagram.svg" alt="" className="socials__item"/>
+                <img src="./public/images/YouTube.svg" alt="" className="socials__item"/>
             </div>
             <ul className="socials__links">
                 <li className="socials__link">Terms Of Use</li>

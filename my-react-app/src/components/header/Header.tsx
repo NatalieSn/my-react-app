@@ -1,8 +1,10 @@
+import '../../assets/styles/Header.css'
+
 export const Header = () => {
     return (
         <header className="header">
         <div className="left">
-            <img src="img/header/logo.svg" alt="" className="header__logo"/>
+            <img src="./public/images/header/logo.svg" alt="" className="header__logo"/>
 
             <nav className="header__nav">
                 <ul className="header-list">

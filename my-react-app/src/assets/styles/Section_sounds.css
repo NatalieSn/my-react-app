@@ -1,0 +1,14 @@
+.section-sounds{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.swiper{
+    width: 53%;
+    height: 65vh;
+    bottom: -80px;
+    object-fit: cover;
+}

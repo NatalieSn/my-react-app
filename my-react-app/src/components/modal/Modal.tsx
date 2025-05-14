@@ -1,3 +1,5 @@
+import '../../assets/styles/Modal.css'
+
 export const Modal = () => {
     return (
         <div id="myModal" className="modal">
