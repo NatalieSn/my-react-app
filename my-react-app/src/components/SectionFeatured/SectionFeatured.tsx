@@ -1,6 +1,6 @@
-import '../../assets/styles/Section_featured.css'
+import '../../assets/styles/SectionFeatured.css'
 
-export const Section_featured = () => {
+export const SectionFeatured = () => {
     return (
         <section className="section-featured">
 

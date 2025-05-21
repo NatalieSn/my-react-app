@@ -1,6 +1,6 @@
-import '../../assets/styles/Section_jobs.css'
+import '../../assets/styles/SectionJobs.css'
 
-export const Section_jobs = () => {
+export const SectionJobs = () => {
     return (
         <section className="section-jobs">
             <div className="jobs">

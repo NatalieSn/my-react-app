@@ -1,7 +1,7 @@
-import '../../assets/styles/Section_reviews.css'
+import '../../assets/styles/SectionReviews.css'
 import '../../assets/styles/Container.css'
 
-export const Section_reviews = () => {
+export const SectionReviews = () => {
     return (
          <section className="section-reviews">
 

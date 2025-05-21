@@ -1,7 +1,7 @@
-import '../../assets/styles/Main_block.css'
+import '../../assets/styles/MainBlock.css'
 import '../../assets/styles/Container.css'
 
-export const Main_block = () => {
+export const MainBlock = () => {
     return (
         <section className="main-block">
 

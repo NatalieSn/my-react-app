@@ -1,7 +1,7 @@
-import '../../assets/styles/Section_plugins.css'
+import '../../assets/styles/SectionPlugins.css'
 import '../../assets/styles/Container.css'
 
-export const Section_plugins = () => {
+export const SectionPlugins = () => {
     return (
         <section className="section-plugins">
 

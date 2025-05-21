@@ -1,7 +1,7 @@
-import '../../assets/styles/Section_studio.css'
+import '../../assets/styles/SectionStudio.css'
 import '../../assets/styles/Container.css'
 
-export const Section_studio = () => {
+export const SectionStudio = () => {
     return (
         <section className="section-studio">
 

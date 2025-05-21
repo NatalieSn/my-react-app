@@ -1,7 +1,7 @@
-import '../../assets/styles/Section_sounds.css'
+import '../../assets/styles/SectionSounds.css'
 import '../../assets/styles/Container.css'
 
-export const Section_sounds = () => {
+export const SectionSounds = () => {
     return (
         <section className="section-sounds">
 

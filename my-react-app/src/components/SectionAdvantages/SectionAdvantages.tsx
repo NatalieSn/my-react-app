@@ -1,6 +1,6 @@
-import '../../assets/styles/Section_advantages.css'
+import '../../assets/styles/SectionAdvantages.css'
 
-export const Section_advantages = () => {
+export const SectionAdvantages = () => {
     return (
         <section className="section-advantages">
             <h2 className="section-advantages__slogan">As good as it sounds</h2>
