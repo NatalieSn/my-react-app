@@ -1,6 +1,6 @@
-import { Header } from "./header/Header";
-import { Modal } from "./modal/Modal";
-import { Footer } from "./footer/Footer";
+import { Header } from "./Header/Header";
+import { Modal } from "./Modal/Modal";
+import { Footer } from "./Footer/Footer";
 
 interface LayoutProps {
   children: React.ReactNode;  // Контент страницы (MainBlock, SectionFeatured и т. д.)
