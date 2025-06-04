@@ -8,7 +8,6 @@ import { SectionReviews } from "./components/SectionReviews/SectionReviews";
 import { SectionAdvantages } from "./components/SectionAdvantages/SectionAdvantages";
 import { SectionJobs } from "./components/SectionJobs/SectionJobs";
 
-
 function App() {
   return (
     <Layout>
@@ -18,7 +17,6 @@ function App() {
       <SectionPlugins />
       <SectionStudio />
       <SectionReviews />
-
       <SectionAdvantages />
       <SectionJobs />
     </Layout>
