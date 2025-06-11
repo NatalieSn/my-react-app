@@ -59,7 +59,7 @@
     margin-bottom: 20px;
   }
   .image-container {
-    display: none; /* Скрываем изображение */
+    display: none;
   }
   .container__slogan-img {
     width: 100%;
@@ -82,7 +82,7 @@
     text-align: center;
   }
   .image-container {
-    display: none; /* Скрываем изображение */
+    display: none;
   }
   .container__slogan-img {
     width: 80%;

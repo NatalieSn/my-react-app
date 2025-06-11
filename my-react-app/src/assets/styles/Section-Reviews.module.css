@@ -5,7 +5,7 @@
   padding: 25px;
   color: #fff;
   z-index: 2;
-  position: absolute; /* Default for all cards */
+  position: absolute; 
 }
 
 .review__text {
@@ -37,7 +37,6 @@
   margin: 0;
 }
 
-/* Specific positioning for cards 1-10 */
 .cards__review-1 {
   top: 146px;
   right: 507px;
@@ -88,13 +87,12 @@
   right: 100px;
 }
 
-/* Fallback for IDs > 10 */
 .section-reviews__cards > .card:not([class*='cards__review-']) {
   position: relative;
   margin: 20px auto;
 }
 
-/* Tablets (768px–1024px) */
+/* Планшеты (768px–1024px) */
 @media only screen and (max-width: 1024px) {
   .card {
     width: 250px;
@@ -142,7 +140,7 @@
   }
 }
 
-/* Mobile (<768px) */
+/* Мобильные устройства (<768px) */
 @media only screen and (max-width: 768px) {
   .card,
   .cards__review-1,

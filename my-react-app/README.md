@@ -21,9 +21,9 @@ API: Загрузка отзывов через хук useFetch.
 - `/src/components` — UI-компоненты
 - `/src/pages` — страницы
 - `/src/hooks` — кастомные хуки
-- `/src/assets - стили
-- `/src/types - общие типы
-- `/public/images - изображения
+- `/src/assets` - стили
+- `/src/types` - общие типы
+- `/public/images` - изображения
 
 ## Технологии
 - React

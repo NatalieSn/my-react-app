@@ -54,7 +54,6 @@
   }
 }
 
-/* Styles for loading and error states */
 .loading,
 .error {
   color: #fff;

@@ -77,12 +77,12 @@ header {
 
 @media only screen and (max-width: 960px) {
   header {
-    padding: 20px 5%; /* Уменьшаем отступы */
+    padding: 20px 5%;
   }
 
   .header-list__item {
-    margin: 5px 1em; /* Отступ между пунктами меню */
-    font-size: 9pt; /* Увеличиваем размер шрифта для лучшего восприятия */
+    margin: 5px 1em;
+    font-size: 9pt;
   }
   .header__button-log,
   .header__button-sign {
@@ -94,42 +94,42 @@ header {
 /* Стили для мобильных устройств (ширина экрана до 768px) */
 @media only screen and (max-width: 768px) {
   header {
-    flex-direction: column; /* Вертикальное выравнивание элементов */
-    padding: 20px 5%; /* Уменьшаем отступы */
+    flex-direction: column;
+    padding: 20px 5%;
   }
 
   .left {
-    flex-direction: column; /* Вертикальное выравнивание логотипа и навигации */
-    align-items: center; /* Центрируем элементы */
-    margin-bottom: 15px; /* Отступ снизу */
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
   }
 
   .header__nav {
-    margin-top: 10px; /* Отступ сверху для навигации */
+    margin-top: 10px;
   }
 
   .header-list {
-    flex-direction: column; /* Вертикальное выравнивание пунктов меню */
-    margin: 0; /* Убираем отступы */
+    flex-direction: column;
+    margin: 0;
     text-align: center;
   }
 
   .header-list__item {
-    margin: 5px 0; /* Отступ между пунктами меню */
-    font-size: 12pt; /* Увеличиваем размер шрифта для лучшего восприятия */
+    margin: 5px 0;
+    font-size: 12pt;
   }
 
   .header__buttons {
-    flex-direction: column; /* Вертикальное выравнивание кнопок */
-    align-items: center; /* Центрируем кнопки */
-    margin-top: 5px; /* Отступ сверху для кнопок */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
   }
 
   .header__button-log,
   .header__button-sign {
-    width: 100%; /* Ширина кнопок на 100% */
-    padding: 12px; /* Увеличиваем отступы для кнопок */
-    font-size: 12pt; /* Увеличиваем размер шрифта */
+    width: 100%;
+    padding: 12px;
+    font-size: 12pt;
     text-align: center;
   }
 }
