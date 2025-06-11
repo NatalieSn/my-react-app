@@ -7,10 +7,20 @@ import { SectionStudio } from "./components/SectionStudio/SectionStudio";
 import { SectionReviews } from "./components/SectionReviews/SectionReviews";
 import { SectionAdvantages } from "./components/SectionAdvantages/SectionAdvantages";
 import { SectionJobs } from "./components/SectionJobs/SectionJobs";
+import usePreloader from "./hooks/usePreloader";
+import useModal from "./hooks/useModal";
+import { Preloader } from "./components/Preloader/Preloader";
 
 function App() {
+  const { isLoading } = usePreloader(1500);
+  const { isModalOpen, openModal, closeModal } = useModal();
+
+  if (isLoading) {
+    return <Preloader />;
+  }
+
   return (
-    <Layout>
+    <Layout isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal}>
       <MainBlock />
       <SectionFeatured />
       <SectionSounds />

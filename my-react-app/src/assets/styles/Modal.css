@@ -1,34 +1,41 @@
+/* Стили для модального окна */
 .modal {
-    display: none;
+    display: flex; /* Отображаем модальное окно как flex-контейнер */
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    z-index: 1000;
+    z-index: 1000; /* Высокий z-index для отображения поверх других элементов */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto; /* Поддержка прокрутки, если контент выходит за пределы */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
 }
 
+/* Стили для содержимого модального окна */
 .modal__content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 15% auto; /* Центрирование по вертикали и горизонтали */
     padding: 20px;
     border-radius: 8px;
     width: 300px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Заголовок модального окна */
 .modal__header {
     color: #0056ff;
     text-align: center;
 }
 
+/* Метки формы */
 .form__label {
     font-weight: bold;
     color: #333;
 }
 
+/* Поля ввода формы */
 .form__input {
     width: 100%;
     padding: 10px;
@@ -38,11 +45,13 @@
     box-sizing: border-box;
 }
 
+/* Контейнер для кнопок формы */
 .form__buttons {
     display: flex;
     justify-content: space-between;
 }
 
+/* Кнопки формы */
 .form__button {
     background-color: #0056ff;
     color: white;
@@ -58,6 +67,7 @@
     background-color: #0041cc;
 }
 
+/* Кнопка закрытия модального окна */
 .modal__close {
     color: #aaa;
     float: right;
