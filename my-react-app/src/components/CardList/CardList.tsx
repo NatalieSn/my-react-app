@@ -1,7 +1,7 @@
 import { useFetch } from '../../hooks/use-fetch';
 import { Card } from '../Card/Card';
 import { Review } from '../../types';
-import '../../assets/styles/section-reviews.module.css';
+import '../../assets/styles/Section-Reviews.module.css';
 
 interface CardListProps {
   limit?: number;
@@ -15,7 +15,7 @@ interface ApiComment {
 
 const API_URL = 'https://jsonplaceholder.typicode.com/comments';
 
-export const CardList = ({ limit = 10 }: CardListProps) => {
+export const CardList = ({ limit = 4 }: CardListProps) => {
   const { data, status, error } = useFetch<ApiComment[]>(`${API_URL}?_limit=${limit}`);
 
   const cards: Review[] = data

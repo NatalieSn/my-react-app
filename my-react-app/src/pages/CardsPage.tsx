@@ -5,7 +5,7 @@ import '../assets/styles/Container.css';
 
 export const CardsPage = () => {
   const [searchParams] = useSearchParams();
-  const limit = parseInt(searchParams.get('limit') || '10', 10);
+  const limit = parseInt(searchParams.get('limit') || '4', 10);
 
   return (
     <section className="section-reviews">
