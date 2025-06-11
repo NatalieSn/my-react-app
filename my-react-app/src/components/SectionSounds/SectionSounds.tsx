@@ -4,8 +4,22 @@ import '../../assets/styles/swiper-bundle.min.js';
 import '../../assets/styles/SectionSounds.css';
 import '../../assets/styles/Container.css';
 
-// Declare Swiper globally
-declare const Swiper: any;
+interface SwiperOptions {
+  direction?: string;
+  loop?: boolean;
+  pagination?: {
+    el: string;
+    clickable?: boolean;
+  };
+}
+
+interface SwiperInstance {
+  destroy?: (deleteInstance?: boolean, cleanStyles?: boolean) => void;
+}
+
+declare const Swiper: {
+  new (selector: string, options: SwiperOptions): SwiperInstance;
+};
 
 export const SectionSounds = () => {
   const [error, setError] = useState<string | null>(null);
@@ -28,7 +42,7 @@ export const SectionSounds = () => {
       });
 
       return () => {
-        swiper.destroy(true, true);
+        swiper.destroy?.(true, true);
       };
     } catch (err) {
       setError('Failed to initialize Swiper. Please try again later.');
@@ -61,8 +75,8 @@ export const SectionSounds = () => {
           Find your <span className="slogan_colored">sound</span>
         </h2>
         <p className="container__text">
-          Preview and download millions of royalty-free samples from top producers,
-          artists, and sound designers. Available on desktop, web, and mobile.
+          Preview and download millions of royalty-free samples from top producers, artists, and
+          sound designers. Available on desktop, web, and mobile.
         </p>
         <button className="container__button" aria-label="Try royalty-free sound samples">
           TRY SOUNDS

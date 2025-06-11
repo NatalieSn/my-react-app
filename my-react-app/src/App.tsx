@@ -3,9 +3,9 @@ import { Layout } from './components/Layout';
 import { HomePage } from './pages/HomePage';
 import { CardsPage } from './pages/CardsPage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import usePreloader from './hooks/usePreloader';
-import useModal from './hooks/useModal';
 import { Preloader } from './components/Preloader/Preloader';
+import useModal from './hooks/use-modal';
+import usePreloader from './hooks/use-preloader';
 
 function App() {
   const { isLoading } = usePreloader(1500);

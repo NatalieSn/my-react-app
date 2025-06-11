@@ -1,54 +1,39 @@
-import { useState, useEffect } from 'react';
+import { useFetch } from '../../hooks/use-fetch';
 import { Card } from '../Card/Card';
-import '../../assets/styles/Section-Reviews.module.css';
-
-interface ReviewCard {
-  id: number;
-  text: string;
-  img: string;
-  author: string;
-  artist: string;
-}
+import { Review } from '../../types';
+import '../../assets/styles/section-reviews.module.css';
 
 interface CardListProps {
   limit?: number;
 }
 
+interface ApiComment {
+  id: number;
+  body: string;
+  email: string;
+}
+
+const API_URL = 'https://jsonplaceholder.typicode.com/comments';
+
 export const CardList = ({ limit = 10 }: CardListProps) => {
-  const [cards, setCards] = useState<ReviewCard[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { data, status, error } = useFetch<ApiComment[]>(`${API_URL}?_limit=${limit}`);
 
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/comments?_limit=${limit}`)
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        return response.json();
-      })
-      .then((comments: Array<{ id: number; body: string; email: string }>) => {
-        const mappedCards: ReviewCard[] = comments.map((comment, index) => ({
-          id: comment.id,
-          text: comment.body,
-          img: `/images/review${(index % 4) + 1}.png`, // Cycle through review1-4.png
-          author: comment.email,
-          artist: 'Artist',
-        }));
-        setCards(mappedCards);
-        setIsLoading(false);
-      })
-      .catch((error: Error) => {
-        console.error('Error:', error);
-        setError('Failed to load reviews. Please try again later.');
-        setIsLoading(false);
-      });
-  }, [limit]);
+  const cards: Review[] = data
+    ? data.map((comment, index) => ({
+        id: comment.id,
+        text: comment.body,
+        img: `/images/review${(index % 4) + 1}.png`,
+        author: comment.email,
+        artist: 'Artist',
+      }))
+    : [];
 
-  if (isLoading) {
+  if (status === 'LOADING') {
     return <div className="loading">Loading reviews...</div>;
   }
 
-  if (error) {
-    return <div className="error">{error}</div>;
+  if (status === 'ERROR') {
+    return <div className="error">{error || 'Failed to load reviews.'}</div>;
   }
 
   return (

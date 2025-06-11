@@ -9,9 +9,7 @@ export const NotFoundPage = () => {
         <h2 className="container__slogan">
           <span className="slogan_colored">404</span> Page Not Found
         </h2>
-        <p className="container__text">
-          Sorry, the page you’re looking for doesn’t exist.
-        </p>
+        <p className="container__text">Sorry, the page you’re looking for doesn’t exist.</p>
         <Link to="/" className="container__button">
           RETURN TO HOME
         </Link>

@@ -19,7 +19,11 @@ export const CardsPage = () => {
         </p>
         <button className="container__button">TRY IT NOW</button>
       </div>
-      <img src="/images/reviews_img.png" alt="Reviews background" className="section-reviews__img" />
+      <img
+        src="/images/reviews_img.png"
+        alt="Reviews background"
+        className="section-reviews__img"
+      />
       <CardList limit={limit} />
     </section>
   );

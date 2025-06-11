@@ -1,9 +1,9 @@
-import '../../assets/styles/Preloader.css'
+import '../../assets/styles/Preloader.css';
 
 export const Preloader = () => {
-    return (
-        <div id="preloader">
-            <div className="loader"></div>
-        </div>
-    )
-}
+  return (
+    <div id="preloader">
+      <div className="loader"></div>
+    </div>
+  );
+};

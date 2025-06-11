@@ -3,7 +3,7 @@
   height: auto;
   background-color: #202020;
   padding: 25px;
-  color: #FFF;
+  color: #fff;
   z-index: 2;
   position: absolute; /* Default for all cards */
 }
@@ -89,7 +89,7 @@
 }
 
 /* Fallback for IDs > 10 */
-.section-reviews__cards > .card:not([class*="cards__review-"]) {
+.section-reviews__cards > .card:not([class*='cards__review-']) {
   position: relative;
   margin: 20px auto;
 }

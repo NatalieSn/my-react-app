@@ -24,7 +24,7 @@
 }
 
 .section-reviews .container__slogan {
-  color: #FFF;
+  color: #fff;
 }
 
 /* Планшеты (768px–1024px) */
@@ -57,7 +57,7 @@
 /* Styles for loading and error states */
 .loading,
 .error {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 16px;
   margin: 20px 0;

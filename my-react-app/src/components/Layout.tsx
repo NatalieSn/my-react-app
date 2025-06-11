@@ -14,7 +14,9 @@ export const Layout = ({ isModalOpen, openModal, closeModal }: LayoutProps) => {
     <>
       <Header openModal={openModal} />
       <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
-      <main><Outlet /></main>
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );

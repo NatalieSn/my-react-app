@@ -1,31 +1,31 @@
 .section-sounds {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
 }
 
 .swiper {
-    width: 53%;
-    height: 65vh;
-    bottom: -80px;
-    object-fit: cover;
+  width: 53%;
+  height: 65vh;
+  bottom: -80px;
+  object-fit: cover;
 }
 
 /* Планшеты (768px–1024px) */
 @media only screen and (max-width: 1024px) {
-    .swiper {
-        width: 70%;
-        height: 50vh;
-    }
+  .swiper {
+    width: 70%;
+    height: 50vh;
+  }
 }
 
 /* Мобильные (<768px) */
 @media only screen and (max-width: 768px) {
-    .swiper {
-        width: 90%;
-        height: 40vh;
-        bottom: -40px;
-    }
+  .swiper {
+    width: 90%;
+    height: 40vh;
+    bottom: -40px;
+  }
 }

@@ -1,54 +1,44 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# My React App - Splice
 
-Currently, two official plugins are available:
+## Описание
+Веб-приложение на React с TypeScript для музыкальной платформы. Включает прелоадер, модальное окно для регистрации, шапку с навигацией и страницы: главная, отзывы и 404. Использует React Router для маршрутизации, кастомные хуки для управления состоянием и API для загрузки отзывов. Стилизация выполнена через CSS, структура — модульная.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Основные функции
+Прелоадер: Спиннер отображается 1,5 секунды при загрузке.
+Модальное окно: Форма регистрации, открывается по кнопке "SIGN UP" в шапке.
+Шапка: Логотип, навигация (STUDIO, COMMUNITY и др.), кнопки входа/регистрации.
 
-## Expanding the ESLint configuration
+## Страницы:
+Главная: Секции (Featured, Sounds и др.) и 3 отзыва.
+Отзывы: Список отзывов с настраиваемым количеством (?limit=N).
+404: Страница ошибки для неверных маршрутов.
+API: Загрузка отзывов через хук useFetch.
+Маршрутизация: Управляется React Router.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Структура проекта
+- `/src/components` — UI-компоненты
+- `/src/pages` — страницы
+- `/src/hooks` — кастомные хуки
+- `/src/assets - стили
+- `/src/types - общие типы
+- `/public/images - изображения
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Технологии
+- React
+- TypeScript
+- Vite
+- React Router
+- ESLint / Prettier
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Установка
+1. Склонируйте репозиторий: `git clone ...`
+2. Установите зависимости: `npm install`
+3. Запустите: `npm run dev`
+4. Откройте в браузере: http://localhost:5173 (Vite)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Скрипты
+- `npm run dev` — запуск dev-сервера
+- `npm run build` — сборка
+- `npm run lint` — проверка кода

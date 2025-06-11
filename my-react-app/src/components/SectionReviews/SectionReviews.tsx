@@ -10,11 +10,16 @@ export const SectionReviews = () => {
           What <span className="slogan_colored">creators</span> are saying about Splice
         </h2>
         <p className="container__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Augue tellus urna, mi velit diam. Turpis diam amet massa id.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Augue tellus urna, mi velit diam.
+          Turpis diam amet massa id.
         </p>
         <button className="container__button">TRY IT NOW</button>
       </div>
-      <img src="./public/images/reviews_img.png" alt="Reviews background" className="section-reviews__img" />
+      <img
+        src="./public/images/reviews_img.png"
+        alt="Reviews background"
+        className="section-reviews__img"
+      />
       <CardList />
     </section>
   );

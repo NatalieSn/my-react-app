@@ -27,7 +27,11 @@ export const HomePage = () => {
           </p>
           <button className="container__button">EXPLORE NOW</button>
         </div>
-        <img src="/images/reviews_img.png" alt="Reviews background" className="section-reviews__img" />
+        <img
+          src="/images/reviews_img.png"
+          alt="Reviews background"
+          className="section-reviews__img"
+        />
         <CardList limit={3} />
       </section>
       <SectionAdvantages />
