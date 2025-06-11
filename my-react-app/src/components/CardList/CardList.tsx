@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Card } from '../Card/Card';
+import '../../assets/styles/Section-Reviews.module.css';
 
 interface ReviewCard {
   id: number;
@@ -9,13 +10,17 @@ interface ReviewCard {
   artist: string;
 }
 
-export const CardList = () => {
+interface CardListProps {
+  limit?: number;
+}
+
+export const CardList = ({ limit = 10 }: CardListProps) => {
   const [cards, setCards] = useState<ReviewCard[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/comments?_limit=4')
+    fetch(`https://jsonplaceholder.typicode.com/comments?_limit=${limit}`)
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return response.json();
@@ -24,7 +29,7 @@ export const CardList = () => {
         const mappedCards: ReviewCard[] = comments.map((comment, index) => ({
           id: comment.id,
           text: comment.body,
-          img: `/public/images/review${index + 1}.png`,
+          img: `/images/review${(index % 4) + 1}.png`, // Cycle through review1-4.png
           author: comment.email,
           artist: 'Artist',
         }));
@@ -36,7 +41,7 @@ export const CardList = () => {
         setError('Failed to load reviews. Please try again later.');
         setIsLoading(false);
       });
-  }, []);
+  }, [limit]);
 
   if (isLoading) {
     return <div className="loading">Loading reviews...</div>;

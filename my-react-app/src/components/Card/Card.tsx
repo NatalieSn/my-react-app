@@ -10,10 +10,15 @@ interface CardProps {
 
 export const Card = ({ id, text, img, author, artist }: CardProps) => {
   return (
-    <div className={`${styles[`cards__review-${id}`]}`}>
+    <div className={`${styles.card} ${styles[`cards__review-${id}`] || ''}`}>
       <p className={styles.review__text}>{text}</p>
       <div className={styles.review__author}>
-        <img src={img} alt={`Avatar of ${author}`} className={styles.review__img} />
+        <img
+          src={img}
+          alt={`Avatar of ${author}`}
+          className={styles.review__img}
+          onError={(e) => (e.currentTarget.src = './public/images/review1.png')}
+        />
         <div className={styles.author}>
           <p className={styles.author__name}>{author}</p>
           <p className={styles.author__artist}>{artist}</p>

@@ -1,13 +1,14 @@
-import '../../assets/styles/Footer.css'
+//import { Link } from 'react-router-dom';
+import '../../assets/styles/Footer.css';
 
 export const Footer = () => {
-    return (
-        <footer className="footer">
-        <div className="copyright">
-            <img src="./public/images/header/logo.svg" alt="" className="copyright__logo" />
-            <p className="copyright__text">2021 Splice.com All Rights Reserved</p>
-        </div>
-        <div className="links">
+  return (
+    <footer className="footer">
+      <div className="copyright">
+        <img src="/images/header/logo.svg" alt="Splice Logo" className="copyright__logo" />
+        <p className="copyright__text">2021 Splice.com All Rights Reserved</p>
+      </div>
+      <div className="links">
             <ul className="links__column">
                 <h2 className="column__h">STUDIO</h2>
                 <li className="column__link">Features</li>
@@ -82,7 +83,7 @@ export const Footer = () => {
                 <li className="socials__link">Contact</li>
                 <li className="socials__link">Help</li>
             </ul>
-        </div>
+      </div>
     </footer>
-    )
-}
+  );
+};

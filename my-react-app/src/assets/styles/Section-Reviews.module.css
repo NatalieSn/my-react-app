@@ -1,13 +1,11 @@
-.cards__review-1,
-.cards__review-2,
-.cards__review-3,
-.cards__review-4 {
+.card {
   width: 290px;
   height: auto;
   background-color: #202020;
   padding: 25px;
   color: #FFF;
   z-index: 2;
+  position: absolute; /* Default for all cards */
 }
 
 .review__text {
@@ -39,43 +37,75 @@
   margin: 0;
 }
 
+/* Specific positioning for cards 1-10 */
 .cards__review-1 {
-  position: absolute;
   top: 146px;
   right: 507px;
 }
 
 .cards__review-2 {
-  position: absolute;
   top: 146px;
   right: 120px;
 }
 
 .cards__review-3 {
-  position: absolute;
   top: 461px;
   right: 440px;
 }
 
 .cards__review-4 {
-  position: absolute;
   top: 461px;
   right: 53px;
 }
 
-/* Планшеты (768px–1024px) */
+.cards__review-5 {
+  top: 200px;
+  right: 400px;
+}
+
+.cards__review-6 {
+  top: 200px;
+  right: 80px;
+}
+
+.cards__review-7 {
+  top: 400px;
+  right: 500px;
+}
+
+.cards__review-8 {
+  top: 400px;
+  right: 150px;
+}
+
+.cards__review-9 {
+  top: 300px;
+  right: 450px;
+}
+
+.cards__review-10 {
+  top: 300px;
+  right: 100px;
+}
+
+/* Fallback for IDs > 10 */
+.section-reviews__cards > .card:not([class*="cards__review-"]) {
+  position: relative;
+  margin: 20px auto;
+}
+
+/* Tablets (768px–1024px) */
 @media only screen and (max-width: 1024px) {
-  .cards__review-1,
-  .cards__review-2,
-  .cards__review-3,
-  .cards__review-4 {
+  .card {
     width: 250px;
     padding: 20px;
   }
   .cards__review-1 {
+    top: 120px;
     right: 400px;
   }
   .cards__review-2 {
+    top: 120px;
     right: 50px;
   }
   .cards__review-3 {
@@ -86,14 +116,45 @@
     top: 400px;
     right: 0;
   }
+  .cards__review-5 {
+    top: 180px;
+    right: 320px;
+  }
+  .cards__review-6 {
+    top: 180px;
+    right: 30px;
+  }
+  .cards__review-7 {
+    top: 360px;
+    right: 400px;
+  }
+  .cards__review-8 {
+    top: 360px;
+    right: 80px;
+  }
+  .cards__review-9 {
+    top: 280px;
+    right: 360px;
+  }
+  .cards__review-10 {
+    top: 280px;
+    right: 40px;
+  }
 }
 
-/* Мобильные (<768px) */
+/* Mobile (<768px) */
 @media only screen and (max-width: 768px) {
+  .card,
   .cards__review-1,
   .cards__review-2,
   .cards__review-3,
-  .cards__review-4 {
+  .cards__review-4,
+  .cards__review-5,
+  .cards__review-6,
+  .cards__review-7,
+  .cards__review-8,
+  .cards__review-9,
+  .cards__review-10 {
     position: relative;
     width: 90%;
     margin: 20px auto;

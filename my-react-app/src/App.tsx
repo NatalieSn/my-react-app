@@ -1,15 +1,11 @@
-import { Layout } from "./components/Layout";
-import { MainBlock } from "./components/MainBlock/MainBlock";
-import { SectionFeatured } from "./components/SectionFeatured/SectionFeatured";
-import { SectionSounds } from "./components/SectionSounds/SectionSounds";
-import { SectionPlugins } from "./components/SectionPlugins/SectionPlugins";
-import { SectionStudio } from "./components/SectionStudio/SectionStudio";
-import { SectionReviews } from "./components/SectionReviews/SectionReviews";
-import { SectionAdvantages } from "./components/SectionAdvantages/SectionAdvantages";
-import { SectionJobs } from "./components/SectionJobs/SectionJobs";
-import usePreloader from "./hooks/usePreloader";
-import useModal from "./hooks/useModal";
-import { Preloader } from "./components/Preloader/Preloader";
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { HomePage } from './pages/HomePage';
+import { CardsPage } from './pages/CardsPage';
+import { NotFoundPage } from './pages/NotFoundPage';
+import usePreloader from './hooks/usePreloader';
+import useModal from './hooks/useModal';
+import { Preloader } from './components/Preloader/Preloader';
 
 function App() {
   const { isLoading } = usePreloader(1500);
@@ -20,16 +16,16 @@ function App() {
   }
 
   return (
-    <Layout isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal}>
-      <MainBlock />
-      <SectionFeatured />
-      <SectionSounds />
-      <SectionPlugins />
-      <SectionStudio />
-      <SectionReviews />
-      <SectionAdvantages />
-      <SectionJobs />
-    </Layout>
+    <Routes>
+      <Route
+        path="/"
+        element={<Layout isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} />}
+      >
+        <Route index element={<HomePage />} />
+        <Route path="cards" element={<CardsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 
