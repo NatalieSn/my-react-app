@@ -5,7 +5,7 @@
   padding: 25px;
   color: #fff;
   z-index: 2;
-  position: absolute; 
+  position: absolute;
 }
 
 .review__text {
@@ -87,7 +87,7 @@
   right: 100px;
 }
 
-.section-reviews__cards > .card:not([class*='cards__review-']) {
+.section-reviews__cards>.card:not([class*='cards__review-']) {
   position: relative;
   margin: 20px auto;
 }
@@ -98,42 +98,52 @@
     width: 250px;
     padding: 20px;
   }
+
   .cards__review-1 {
     top: 120px;
     right: 400px;
   }
+
   .cards__review-2 {
     top: 120px;
     right: 50px;
   }
+
   .cards__review-3 {
     top: 400px;
     right: 350px;
   }
+
   .cards__review-4 {
     top: 400px;
     right: 0;
   }
+
   .cards__review-5 {
     top: 180px;
     right: 320px;
   }
+
   .cards__review-6 {
     top: 180px;
     right: 30px;
   }
+
   .cards__review-7 {
     top: 360px;
     right: 400px;
   }
+
   .cards__review-8 {
     top: 360px;
     right: 80px;
   }
+
   .cards__review-9 {
     top: 280px;
     right: 360px;
   }
+
   .cards__review-10 {
     top: 280px;
     right: 40px;
@@ -142,6 +152,7 @@
 
 /* Мобильные устройства (<768px) */
 @media only screen and (max-width: 768px) {
+
   .card,
   .cards__review-1,
   .cards__review-2,
@@ -159,12 +170,15 @@
     top: auto;
     right: auto;
   }
+
   .review__text {
     font-size: 12pt;
   }
+
   .author__name {
     font-size: 10pt;
   }
+
   .author__artist {
     font-size: 7pt;
   }

@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-.section-reviews > .container {
+.section-reviews>.container {
   height: 350px;
 }
 
@@ -33,6 +33,7 @@
     padding: 150px 5% 0 3%;
     height: 800px;
   }
+
   .section-reviews__img {
     width: 60%;
     top: -150px;
@@ -46,6 +47,7 @@
     height: auto;
     min-height: 700px;
   }
+
   .section-reviews__img {
     position: relative;
     width: 100%;

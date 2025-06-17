@@ -15,6 +15,7 @@
   .section-studio {
     margin: 0 5% 150px 5%;
   }
+
   .info-studio__img {
     width: 50%;
     margin-left: 5%;
@@ -27,6 +28,7 @@
     flex-direction: column;
     margin: 0 5% 100px 5%;
   }
+
   .info-studio__img {
     width: 80%;
     margin-left: 0;

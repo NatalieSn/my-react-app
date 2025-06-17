@@ -20,12 +20,12 @@ export const CardList = ({ limit = 4 }: CardListProps) => {
 
   const cards: Review[] = data
     ? data.map((comment, index) => ({
-        id: comment.id,
-        text: comment.body,
-        img: `/images/review${(index % 4) + 1}.png`,
-        author: comment.email,
-        artist: 'Artist',
-      }))
+      id: comment.id,
+      text: comment.body,
+      img: `/images/review${(index % 4) + 1}.png`,
+      author: comment.email,
+      artist: 'Artist',
+    }))
     : [];
 
   if (status === 'LOADING') {

@@ -27,13 +27,16 @@
   .section-featured {
     margin: 40px auto;
   }
+
   .section-featured__list {
     width: 70%;
   }
+
   .section-featured__img {
     padding: 0 1em;
     width: 80%;
   }
+
   .section-featured__caption {
     font-size: 10pt;
   }
@@ -44,15 +47,18 @@
   .section-featured {
     margin: 20px 5%;
   }
+
   .section-featured__list {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
+
   .section-featured__img {
     padding: 10px 0;
     width: 80%;
   }
+
   .section-featured__caption {
     font-size: 10pt;
   }

@@ -18,7 +18,7 @@ interface SwiperInstance {
 }
 
 declare const Swiper: {
-  new (selector: string, options: SwiperOptions): SwiperInstance;
+  new(selector: string, options: SwiperOptions): SwiperInstance;
 };
 
 export const SectionSounds = () => {

@@ -3,7 +3,9 @@
 .cards__review-3,
 .cards__review-4 {
   width: 290px;
-  height: /*216px*/ auto;
+  height:
+    /*216px*/
+    auto;
   background-color: #202020;
   padding: 25px;
   color: #fff;

@@ -82,12 +82,15 @@
     max-width: 500px;
     padding: 15px;
   }
+
   .modal__header {
     font-size: 14pt;
   }
+
   .form__input {
     padding: 8px;
   }
+
   .form__button {
     padding: 8px;
     font-size: 9pt;
@@ -102,25 +105,31 @@
     padding: 10px;
     margin: 20% auto;
   }
+
   .modal__header {
     font-size: 12pt;
   }
+
   .form__label {
     font-size: 10pt;
   }
+
   .form__input {
     padding: 6px;
     font-size: 9pt;
   }
+
   .form__buttons {
     flex-direction: column;
     gap: 10px;
   }
+
   .form__button {
     width: 100%;
     padding: 10px;
     font-size: 10pt;
   }
+
   .modal__close {
     font-size: 24px;
   }

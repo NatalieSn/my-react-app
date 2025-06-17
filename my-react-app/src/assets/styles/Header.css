@@ -84,6 +84,7 @@ header {
     margin: 5px 1em;
     font-size: 9pt;
   }
+
   .header__button-log,
   .header__button-sign {
     background-color: #0056ff;

@@ -15,7 +15,7 @@
   object-fit: contain;
 }
 
-.section-plugins > .container {
+.section-plugins>.container {
   width: 28%;
 }
 
@@ -24,11 +24,13 @@
   .section-plugins {
     padding: 200px 0 80px 0;
   }
+
   .section-plugins__img {
     width: 40%;
     margin-right: 10%;
   }
-  .section-plugins > .container {
+
+  .section-plugins>.container {
     width: 35%;
   }
 }
@@ -40,11 +42,13 @@
     padding: 100px 0 50px 0;
     border-radius: 0;
   }
+
   .section-plugins__img {
     width: 80%;
     margin: 0 auto;
   }
-  .section-plugins > .container {
+
+  .section-plugins>.container {
     width: 90%;
   }
 }

@@ -45,14 +45,17 @@
   .container {
     width: 50%;
   }
+
   .container__slogan {
     font-size: 24pt;
     text-align: center;
   }
+
   .container__text {
-    font-size: 14pt; 
+    font-size: 14pt;
     text-align: center;
   }
+
   .container__button {
     padding: 8px 16px;
     font-size: 9pt;
@@ -65,19 +68,23 @@
     width: 90%;
     margin: 0 auto;
   }
+
   .container__caption {
     font-size: 12pt;
     text-align: center;
   }
+
   .container__slogan {
     font-size: 20pt;
     text-align: center;
   }
+
   .container__text {
     font-size: 12pt;
     line-height: 150%;
     text-align: center;
   }
+
   .container__button {
     width: 100%;
     padding: 12px;
