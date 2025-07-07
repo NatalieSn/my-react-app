@@ -1,0 +1,35 @@
+.section-experiencies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 230px auto;
+}
+
+.section-experiencies__img {
+    width: 40%;
+    margin-left: 8%;
+}
+
+/* Планшеты (768px–1024px) */
+@media only screen and (max-width: 1024px) {
+    .section-experiencies {
+        margin: 0 5% 150px 5%;
+    }
+    section-experiencies__img {
+        width: 50%;
+        margin-left: 5%;
+    }
+}
+
+/* Мобильные (<768px) */
+@media only screen and (max-width: 768px) {
+    .section-experiencies {
+        flex-direction: column;
+        margin: 0 5% 100px 5%;
+    }
+    .section-experiencies__img {
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}

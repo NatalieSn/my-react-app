@@ -22,7 +22,7 @@ export const CardList = ({ limit = 4 }: CardListProps) => {
     ? data.map((comment, index) => ({
       id: comment.id,
       text: comment.body,
-      img: `/images/review${(index % 4) + 1}.png`,
+      img: `/images/avat${(index % 4) + 1}.jpg`,
       author: comment.email,
       artist: 'Artist',
     }))

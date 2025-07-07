@@ -2,15 +2,14 @@ import '../../assets/styles/SectionJobs.css';
 
 export const SectionJobs = () => {
   return (
-    <section className="section-jobs">
+    <section className="section-jobs" id="jobs">
       <div className="jobs">
         <h2 className="jobs__slogan">
-          Come change the way
+          Станьте частью миссии
           <br />
-          people make music
+          по защите и исследованию океанов
         </h2>
-        <button className="jobs__button">JOBS AT SPLICE</button>
-      </div>
+<a href="https://fondwhale.ru/" className="jobs__button">ПРИСОЕДИНИТЬСЯ</a>      </div>
     </section>
   );
 };

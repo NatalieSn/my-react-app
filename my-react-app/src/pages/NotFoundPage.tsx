@@ -7,11 +7,13 @@ export const NotFoundPage = () => {
     <section className="section-reviews">
       <div className="container">
         <h2 className="container__slogan">
-          <span className="slogan_colored">404</span> Page Not Found
+          <span className="slogan_colored">404</span> Страница не найдена
         </h2>
-        <p className="container__text">Sorry, the page you’re looking for doesn’t exist.</p>
+        <p className="container__text">
+          К сожалению, страница, которую вы ищете, не существует.
+        </p>
         <Link to="/" className="container__button">
-          RETURN TO HOME
+          ВЕРНУТЬСЯ НА ГЛАВНУЮ
         </Link>
       </div>
     </section>

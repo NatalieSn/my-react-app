@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Fontimerr Regular';
+  src: url('./public/fonts/AVFontimer.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Fontimerr Bold';
+  src: url('./public/fonts/AVFontimer-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Fontimerr Light';
+  src: url('./public/fonts/AVFontimer-Light.ttf') format('truetype');
+}

@@ -1,136 +1,195 @@
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 42px 5.5%;
-  background: #f4f6f9;
-  overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 5.5%;
+    background: rgba(198, 219, 234, 0.5);
+    overflow: hidden;
+    position: relative;
 }
 
 .left {
-  display: flex;
+    display: flex;
+    align-items: center;
 }
 
 .header__logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: black;
-  background: #f4f6f9;
-  z-index: 0;
-  max-width: 113px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    z-index: 0;
+    max-width: 113px;
 }
 
 .header__nav {
-  display: flex;
-  z-index: 1;
-  align-items: center;
+    display: flex;
+    z-index: 1;
+    align-items: center;
 }
 
 .header-list {
-  display: flex;
-  margin: 0 0 0 79px;
-  padding: 0;
+    display: flex;
+    margin: 0 0 0 79px;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .header-list__item {
-  margin: 0 16.5px;
-  color: #333;
-  font-size: 10pt;
-  font-weight: 500;
-  list-style-type: none;
-  cursor: pointer;
+    font-family: 'Fontimerr Light', Helvetica, sans-serif;
+    margin: 0 16.5px;
+    font-size: 10pt;
+    font-weight: 500;
+    list-style-type: none;
+    cursor: pointer;
 }
 
-.header-list__item:hover {
-  color: #555;
+.header-list__item-link:hover {
+    color: #000;
+}
+
+.header-list__item-link {
+    text-decoration: none;
+    scroll-margin-top: 80px;
+    color: rgb(38, 101, 140);
 }
 
 .header__buttons {
-  display: flex;
-  gap: 10px;
-  float: right;
-  z-index: 2;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
 }
 
 .header__button-log,
 .header__button-sign {
-  padding: 10px 20px;
-  font-size: 10pt;
-  border-radius: 25px;
-  text-decoration: none;
-  color: #fff;
-  border: none;
+    font-family: 'Fontimerr Bold', Helvetica, sans-serif;
+    padding: 10px 20px;
+    font-size: 10pt;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .header__button-sign {
-  background: transparent;
-  color: #fff;
-  background-color: rgba(256, 256, 256, 0.26);
-  border: none;
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .header__button-sign:hover {
-  background-color: #0056ff;
-  transition: 0.2s;
-  cursor: pointer;
+    background-color: #26658c;
+    transition: 0.2s;
 }
 
-@media only screen and (max-width: 960px) {
-  header {
-    padding: 20px 5%;
-  }
+/* Laptops (1024px - 1440px) */
+@media screen and (max-width: 1440px) {
+    .header-list {
+        margin-left: 40px;
+    }
 
-  .header-list__item {
-    margin: 5px 1em;
-    font-size: 9pt;
-  }
+    .header-list__item {
+        margin: 0 12px;
+        font-size: 9pt;
+    }
 
-  .header__button-log,
-  .header__button-sign {
-    background-color: #0056ff;
-    font-size: 9pt;
-  }
+    .header__button-log,
+    .header__button-sign {
+        padding: 8px 16px;
+        font-size: 9pt;
+    }
 }
 
-/* Стили для мобильных устройств (ширина экрана до 768px) */
-@media only screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 20px 5%;
-  }
+/* Tablets and smaller (≤1023px) */
+@media screen and (max-width: 1023px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 5%;
+    }
 
-  .left {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;
-  }
+    .left {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
 
-  .header__nav {
-    margin-top: 10px;
-  }
+    .header__logo {
+        font-size: 1.4rem;
+        margin: 0 auto;
+    }
 
-  .header-list {
-    flex-direction: column;
-    margin: 0;
-    text-align: center;
-  }
+    .header__buttons {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
 
-  .header-list__item {
-    margin: 5px 0;
-    font-size: 12pt;
-  }
+    .header__button-log,
+    .header__button-sign {
+        color: #26658c;
+        background: transparent;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 
-  .header__buttons {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
-  }
+    .header__nav {
+        width: 100%;
+        margin-top: 15px;
+        display: flex;
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+    }
 
-  .header__button-log,
-  .header__button-sign {
-    width: 100%;
-    padding: 12px;
-    font-size: 12pt;
-    text-align: center;
-  }
+    .header-list {
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .header-list__item {
+        flex: 0 0 33%;
+        text-align: center;
+        margin: 8px 0;
+        font-size: 0.9rem;
+        min-width: 100px;
+        box-sizing: border-box;
+    }
+
+    .header-list__item:nth-child(1),
+    .header-list__item:nth-child(2),
+    .header-list__item:nth-child(3) {
+        order: 1;
+    }
+
+    .header-list__item:nth-child(4),
+    .header-list__item:nth-child(5),
+    .header-list__item:nth-child(6) {
+        order: 2;
+    }
+}
+
+/* Phones (≤767px) */
+@media screen and (max-width: 767px) {
+    header {
+        padding: 12px 3%;
+    }
+
+    .header__logo {
+        font-size: 1.2rem;
+        max-width: 90px;
+    }
+
+    .header-list__item {
+        font-size: 0.85rem;
+        min-width: 80px;
+    }
+
+    .header__button-log,
+    .header__button-sign {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        min-width: 70px;
+        touch-action: manipulation;
+    }
 }

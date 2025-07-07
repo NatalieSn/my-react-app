@@ -1,0 +1,50 @@
+{
+  "gearData": [
+    {
+      "imgSrc": "./public/images/orca.webp",
+      "imgAlt": "Whale Watching Adventure",
+      "heading": "Гидрокостюм Orca 3.8 Enduro 2021 (MT)"
+    },
+    {
+      "imgSrc": "./public/images/neptune.jpg",
+      "imgAlt": "Deep Sea Whale Encounter",
+      "heading": "Маска OCEAN REEF NEPTUNE III BLACK / BLACK (для дайвинга, полнолицевая)"
+    },
+    {
+      "imgSrc": "./public/images/finntrail.webp",
+      "imgAlt": "Coastal Whale Journey",
+      "heading": "ГЕРМОРЮКЗАК FINNTRAIL EXPEDITION 40L 1730 BLACK"
+    },
+    {
+      "imgSrc": "./public/images/scuba.jpg",
+      "imgAlt": "Ultimate Whale Expedition",
+      "heading": "Консоль SCUBAPRO 3-х приборная (манометр, глубиномер, компас, термометр)"
+    }
+  ],
+  "toursData": [
+    {
+      "imgSrc": "./public/images/watching.jpg",
+      "imgAlt": "Whale Watching Adventure",
+      "heading": "Очарование танца китов",
+      "description": "Растворитесь в объятиях океана, плывя рядом с величественными горбатыми китами, чьи песни эхом звучат в глубинах. Это путешествие — идеальный выбор для тех, кто впервые открывает для себя магию морских исполинов, обещающее восторг и трепет перед чудом природы."
+    },
+    {
+      "imgSrc": "./public/images/deepsea.webp",
+      "imgAlt": "Deep Sea Whale Encounter",
+      "heading": "Тайны глубин",
+      "description": "Погрузитесь в таинственные бездны океана, где косатки и кашалоты раскрывают свои древние секреты. Под руководством наших искусных гидов это захватывающее приключение станет гимном красоте подводного мира, оставляя в сердце неизгладимый след."
+    },
+    {
+      "imgSrc": "./public/images/coastal.webp",
+      "imgAlt": "Coastal Whale Journey",
+      "heading": "Песнь прибрежных китов",
+      "description": "Отправьтесь в путешествие по мерцающим водам побережья, где серые киты грациозно скользят в ритме волн. Сопровождаемые нашими опытными наставниками, вы ощутите гармонию с природой и создадите воспоминания, сияющие, как морская пена под солнцем."
+    },
+    {
+      "imgSrc": "./public/images/ultimate.jpg",
+      "imgAlt": "Ultimate Whale Expedition",
+      "heading": "Эпическая одиссея китов",
+      "description": "Для искушённых искателей приключений эта грандиозная экспедиция открывает врата в мир множества китовых видов. Погрузитесь в сердце океана, где каждый момент — это гимн свободе и величию морских гигантов, обещающий опыт, сравнимый с легендой."
+    }
+  ]
+}

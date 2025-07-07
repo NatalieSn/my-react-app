@@ -1,65 +1,273 @@
 .section-reviews {
-  background-color: #000;
-  position: relative;
-  padding: 230px 7% 0 3.6%;
-  overflow: visible;
-  max-width: 100vw;
-  width: 100%;
-  height: 800px;
-  box-sizing: border-box;
+    background: linear-gradient(to bottom, rgb(1, 22, 43) 57%, rgb(106, 144, 180) 100%);
+    position: relative;
+    padding: 230px 7% 0 3.6%;
+    overflow: visible;
+    max-width: 100vw;
+    width: 100%;
+    height: 105vh;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .section-reviews>.container {
-  height: 350px;
+    height: 350px;
+}
+
+.section-reviews  .container__slogan {
+    color: #fff;
 }
 
 .section-reviews__img {
-  width: 55%;
-  height: auto;
-  position: absolute;
-  z-index: 1;
-  top: -184px;
-  right: 0;
-  object-fit: contain;
-}
-
-.section-reviews .container__slogan {
-  color: #fff;
-}
-
-/* Планшеты (768px–1024px) */
-@media only screen and (max-width: 1024px) {
-  .section-reviews {
-    padding: 150px 5% 0 3%;
-    height: 800px;
-  }
-
-  .section-reviews__img {
-    width: 60%;
-    top: -150px;
-  }
-}
-
-/* Мобильные (<768px) */
-@media only screen and (max-width: 768px) {
-  .section-reviews {
-    padding: 100px 5% 5% 5%;
+    width: 55%;
     height: auto;
-    min-height: 700px;
-  }
-
-  .section-reviews__img {
-    position: relative;
-    width: 100%;
-    top: 0;
-    margin-bottom: 20px;
-  }
+    position: absolute;
+    z-index: 0;
+    top: -184px;
+    right: 0;
+    object-fit: contain;
 }
 
-.loading,
-.error {
-  color: #fff;
-  text-align: center;
-  font-size: 16px;
-  margin: 20px 0;
+.section-reviews__cards {
+    z-index: 1;
+}
+
+.cards__review-1,
+.cards__review-2,
+.cards__review-3,
+.cards__review-4 {
+    width: 290px;
+    height: auto;
+    background-color: rgb(106, 144, 180);
+    padding: 25px;
+    color: #fff;
+    z-index: 0;
+    box-sizing: border-box;
+    aspect-ratio: 3 / 2;
+}
+
+.cards__review-1 {
+    position: absolute;
+    top: 146px;
+    right: 507px;
+}
+
+.cards__review-2 {
+    position: absolute;
+    top: 146px;
+    right: 120px;
+}
+
+.cards__review-3 {
+    position: absolute;
+    top: 461px;
+    right: 440px;
+}
+
+.cards__review-4 {
+    position: absolute;
+    top: 461px;
+    right: 53px;
+}
+
+.review__text {
+    line-height: 1.7;
+    font-size: 1rem;
+    font-family: 'Fontimerr Regular', Helvetica, Arial, sans-serif;
+    margin: 0 0 17px 0;
+}
+
+.review__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.review__author {
+    font-family: 'Fontimerr Regular', Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.author__name {
+    font-family: 'Fontimerr Light', Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    margin: 0 0 4px 0;
+}
+
+.author__artist {
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1249px) {
+    .section-reviews {
+        padding: 60px 4% 30px;
+        min-height: 80vh;
+    }
+    .section-reviews__img {
+        width: 60%;
+        max-width: 500px;
+        top: -20px;
+    }
+    .section-reviews__cards {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 280px auto 0;
+        gap: 15px;
+    }
+    .cards__review-1,
+    .cards__review-2,
+    .cards__review-3,
+    .cards__review-4 {
+        position: static;
+        width: auto;
+        flex: 1 1 45%;
+        max-width: 48%;
+        padding: 20px;
+        background-color: rgba(106, 144, 180, 0.9);
+        border-radius: 10px;
+        aspect-ratio: 3 / 2;
+    }
+    .cards__review-1,
+    .cards__review-2 {
+        order: 1;
+    }
+    .cards__review-3,
+    .cards__review-4 {
+        order: 2;
+    }
+    .review__text {
+        font-size: 0.95rem;
+    }
+    .author__name {
+        font-size: 0.85rem;
+    }
+    .author__artist {
+        font-size: 0.65rem;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .section-reviews {
+        padding: 60px 4% 30px;
+        min-height: 80vh;
+    }
+    .section-reviews__img {
+        width: 60%;
+        max-width: 500px;
+        top: -20px;
+    }
+    .section-reviews__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 180px auto 0;
+        gap: 15px;
+    }
+    .cards__review-1,
+    .cards__review-2,
+    .cards__review-3,
+    .cards__review-4 {
+        position: static;
+        width: auto;
+        flex: 1 1 45%;
+        max-width: 48%;
+        padding: 20px;
+        background-color: rgba(106, 144, 180, 0.9);
+        border-radius: 10px;
+        aspect-ratio: 3 / 2;
+    }
+    .cards__review-1,
+    .cards__review-2 {
+        order: 1;
+    }
+    .cards__review-3,
+    .cards__review-4 {
+        order: 2;
+    }
+    .review__text {
+        font-size: 0.95rem;
+    }
+    .author__name {
+        font-size: 0.85rem;
+    }
+    .author__artist {
+        font-size: 0.65rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .section-reviews {
+        height: 100vh;
+        padding: 40px 3% 20px;
+    }
+    .section-reviews>.container {
+        height: auto;
+    }
+    .section-reviews__img {
+        display: none;
+    }
+    .section-reviews__cards {
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .cards__review-1,
+    .cards__review-2,
+    .cards__review-3,
+    .cards__review-4 {
+        flex: 1 1 45%;
+        max-width: 48%;
+        padding: 15px;
+    }
+    .review__text {
+        font-size: 0.9rem;
+    }
+    .author__name {
+        font-size: 0.8rem;
+    }
+    .author__artist {
+        font-size: 0.6rem;
+    }
+    .review__img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section-reviews {
+        padding: 30px 2% 15px;
+    }
+    .section-reviews__img {
+        max-width: 300px;
+    }
+    .section-reviews__cards {
+        gap: 8px;
+    }
+    .cards__review-1,
+    .cards__review-2,
+    .cards__review-3,
+    .cards__review-4 {
+        flex: 1 1 48%;
+        max-width: 49%;
+        padding: 12px;
+    }
+    .review__text {
+        font-size: 0.85rem;
+    }
+    .author__name {
+        font-size: 0.75rem;
+    }
+    .author__artist {
+        font-size: 0.55rem;
+    }
+    .review__img {
+        width: 30px;
+        height: 30px;
+    }
 }

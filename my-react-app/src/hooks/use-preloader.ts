@@ -1,16 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-const usePreloader = (delay: number = 1500) => {
+interface PreloaderHook {
+  isLoading: boolean;
+}
+
+const usePreloader = (initialDelay: number = 1500): PreloaderHook => {
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
+    // Показываем прелоадер при начальной загрузке или смене маршрута
+    setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
-      document.body.style.display = 'block'; // Show page content
-    }, delay);
+    }, initialDelay);
 
-    return () => clearTimeout(timer); // Cleanup timer on unmount
-  }, [delay]);
+    return () => clearTimeout(timer);
+  }, [location.pathname, initialDelay]);
 
   return { isLoading };
 };

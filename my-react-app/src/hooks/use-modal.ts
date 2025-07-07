@@ -1,29 +1,50 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
-const useModal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+interface ModalState {
+  [key: string]: boolean;
+}
 
-  const openModal = useCallback(() => {
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden'; // Disable scroll
-  }, []);
+interface ModalHook {
+  isModalOpen: ModalState;
+  openModal: (modalId: string) => void;
+  closeModal: (modalId: string) => void;
+}
 
-  const closeModal = useCallback(() => {
-    setIsModalOpen(false);
-    document.body.style.overflow = 'auto'; // Enable scroll
-  }, []);
+const useModal = (): ModalHook => {
+  const [isModalOpen, setIsModalOpen] = useState<ModalState>({
+    'tours-modal': false,
+    'gear-modal': false,
+    'reg-modal': false,
+  });
+
+  const openModal = (modalId: string) => {
+    setIsModalOpen((prev) => ({ ...prev, [modalId]: true }));
+  };
+
+  const closeModal = (modalId: string) => {
+    setIsModalOpen((prev) => ({ ...prev, [modalId]: false }));
+  };
 
   useEffect(() => {
-    const handleWindowClick = (event: MouseEvent) => {
-      const modal = document.getElementById('myModal');
-      if (event.target === modal) {
-        closeModal();
+    const toursBtn = document.getElementById('learn-more-tours');
+    const gearBtn = document.getElementById('learn-more-gear');
+
+    if (toursBtn) {
+      toursBtn.addEventListener('click', () => openModal('tours-modal'));
+    }
+    if (gearBtn) {
+      gearBtn.addEventListener('click', () => openModal('gear-modal'));
+    }
+
+    return () => {
+      if (toursBtn) {
+        toursBtn.removeEventListener('click', () => openModal('tours-modal'));
+      }
+      if (gearBtn) {
+        gearBtn.removeEventListener('click', () => openModal('gear-modal'));
       }
     };
-
-    window.addEventListener('click', handleWindowClick);
-    return () => window.removeEventListener('click', handleWindowClick);
-  }, [closeModal]);
+  }, []);
 
   return { isModalOpen, openModal, closeModal };
 };

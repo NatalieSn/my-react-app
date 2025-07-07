@@ -1,233 +1,246 @@
 .footer {
-  display: grid;
-  grid-template-columns: 1.5fr 1.2fr 1.2fr 1.2fr 1.7fr;
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 70px 3%;
-  width: 80%;
-  max-width: 100vw;
-  margin: 15% auto 130px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1400px;
+    margin: 12vw auto 8rem;
+    gap: 2rem;
 }
 
-.copyright:nth-child(1) {
-  grid-row: 1 / span 2;
+.copyright {
+    flex: 1 1 25%;
+    min-width: 280px;
 }
 
-.links:nth-child(2) {
-  grid-row: 1;
+.links-container {
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.links:nth-child(3) {
-  grid-row: 2;
+.links {
+    flex: 1 1 30%;
+    min-width: 140px;
 }
 
-.links:nth-child(4) {
-  grid-row: 1;
-}
-
-.links:nth-child(5) {
-  grid-row: 2;
-}
-
-.links:nth-child(6) {
-  grid-row: 1;
-}
-
-.links:nth-child(7) {
-  grid-row: 2;
-}
-
-.socials:nth-child(8) {
-  grid-row: 1 / span 2;
+.socials {
+    flex: 1 1 25%;
+    min-width: 280px;
 }
 
 .copyright__logo {
-  width: 115px;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
 }
 
 .copyright__text {
-  font-size: 8pt;
-  color: #606060;
+    font-size: 0.7rem;
+    color: rgb(38, 101, 140);
+    margin-top: 1rem;
 }
 
 .links__column {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.column__link {
-  color: #606060;
-  font-size: 10pt;
-  margin: 15px 0;
-  font-weight: lighter;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .column__h {
-  margin: 0;
-  color: #000;
-  font-size: 13pt;
+    margin: 0;
+    color: #000;
+    font-size: 1.1rem;
+}
+
+.column__link {
+    color: rgb(38, 101, 140);
+    font-size: 0.85rem;
+    margin: 1rem 0;
+    text-decoration: none;
 }
 
 .socials_imgs {
-  margin: 25px 0 30px 0;
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 0.75rem;
 }
 
 .socials__item {
-  margin: 0 10px;
-  width: 17px;
-  cursor: pointer;
+    width: 1.2rem;
+    height: auto;
+    cursor: pointer;
 }
 
 .socials__links {
-  list-style-type: none;
-  color: #606060;
-  display: flex;
-  padding: 0;
+    list-style-type: none;
+    color: rgb(38, 101, 140);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 1.25rem;
 }
 
 .socials__link {
-  margin-right: 30px;
-  width: auto;
-  font-size: 8pt;
-  font-weight: 100;
+    font-size: 0.7rem;
+    text-decoration: none;
 }
 
-.socials__link:last-child {
-  margin-right: 0;
-}
-
-/* Планшеты (768px–1024px) */
 @media only screen and (max-width: 1024px) {
-  .footer {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px 2%;
-    width: 90%;
-    margin: 20% auto 80px auto;
-  }
+    .footer {
+        width: 95%;
+        margin: 15vw auto 5rem;
+        gap: 2rem 32px;
+        flex-direction: column;
+    }
 
-  .copyright:nth-child(1) {
-    grid-row: 1;
-    grid-column: 1 / span 2;
-  }
+    .copyright {
+        flex: 1 1 100%;
+        text-align: center;
+    }
 
-  .links:nth-child(2) {
-    grid-row: 2;
-    grid-column: 1;
-  }
+    .links-container {
+        flex: 1 1 100%;
+        gap: 1.5rem;
+        text-align: center;
+    }
 
-  .links:nth-child(3) {
-    grid-row: 2;
-    grid-column: 2;
-  }
+    .links {
+        flex: 1 1 45%;
+        min-width: 140px;
+    }
 
-  .links:nth-child(4) {
-    grid-row: 3;
-    grid-column: 1;
-  }
+    .socials {
+        flex: 1 1 100%;
+        text-align: center;
+    }
 
-  .links:nth-child(5) {
-    grid-row: 3;
-    grid-column: 2;
-  }
+    .copyright__logo {
+        max-width: 100px;
+    }
 
-  .links:nth-child(6) {
-    grid-row: 4;
-    grid-column: 1;
-  }
+    .copyright__text {
+        font-size: 0.65rem;
+    }
 
-  .links:nth-child(7) {
-    grid-row: 4;
-    grid-column: 2;
-  }
+    .column__h {
+        font-size: 1rem;
+    }
 
-  .socials:nth-child(8) {
-    grid-row: 5;
-    grid-column: 1 / span 2;
-  }
+    .column__link {
+        font-size: 0.8rem;
+    }
 
-  .column__h {
-    font-size: 12pt;
-  }
+    .socials_imgs {
+        justify-content: center;
+        gap: 0.6rem;
+    }
 
-  .column__link {
-    font-size: 9pt;
-  }
+    .socials__item {
+        width: 1rem;
+    }
+
+    .socials__links {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .socials__link {
+        font-size: 0.65rem;
+    }
 }
 
-/* Мобильные (<768px) */
 @media only screen and (max-width: 768px) {
-  .footer {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    width: 95%;
-    margin: 8% auto 50px auto;
-    text-align: center;
-  }
+    .footer {
+        width: 98%;
+        margin: 6vw auto 3rem;
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .copyright:nth-child(1) {
-    grid-row: 1;
-    grid-column: 1;
-  }
+    .copyright,
+    .links-container,
+    .links,
+    .socials {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
 
-  .links:nth-child(2) {
-    grid-row: 2;
-    grid-column: 1;
-  }
+    .copyright__logo {
+        max-width: 90px;
+    }
 
-  .links:nth-child(3) {
-    grid-row: 3;
-    grid-column: 1;
-  }
+    .copyright__text {
+        font-size: 0.6rem;
+    }
 
-  .links:nth-child(4) {
-    grid-row: 4;
-    grid-column: 1;
-  }
+    .column__h {
+        font-size: 0.9rem;
+    }
 
-  .links:nth-child(5) {
-    grid-row: 5;
-    grid-column: 1;
-  }
+    .column__link {
+        font-size: 0.75rem;
+        margin: 0.75rem 0;
+    }
 
-  .links:nth-child(6) {
-    grid-row: 6;
-    grid-column: 1;
-  }
+    .socials_imgs {
+        margin: 1rem 0;
+        gap: 0.5rem;
+    }
 
-  .links:nth-child(7) {
-    grid-row: 7;
-    grid-column: 1;
-  }
+    .socials__item {
+        width: 0.9rem;
+    }
 
-  .socials:nth-child(8) {
-    grid-row: 8;
-    grid-column: 1;
-    margin: 0 auto;
-  }
+    .socials__links {
+        gap: 0.75rem;
+    }
 
-  .copyright__logo {
-    width: 100px;
-  }
+    .socials__link {
+        font-size: 0.6rem;
+    }
+}
 
-  .copyright__text {
-    font-size: 7pt;
-  }
+@media only screen and (max-width: 480px) {
+    .footer {
+        width: 100%;
+        margin: 5vw auto 2rem;
+        gap: 1rem;
+    }
 
-  .column__h {
-    font-size: 11pt;
-  }
+    .copyright__logo {
+        max-width: 80px;
+    }
 
-  .column__link {
-    font-size: 8pt;
-    margin: 10px 0;
-  }
+    .copyright__text {
+        font-size: 0.55rem;
+    }
 
-  .socials__item {
-    width: 15px;
-  }
+    .column__h {
+        font-size: 0.85rem;
+    }
 
-  .socials__link {
-    font-size: 7pt;
-    margin-right: 20px;
-  }
+    .column__link {
+        font-size: 0.7rem;
+        margin: 0.5rem 0;
+    }
+
+    .socials_imgs {
+        margin: 0.75rem 0;
+        gap: 0.4rem;
+    }
+
+    .socials__item {
+        width: 0.8rem;
+    }
+
+    .socials__links {
+        gap: 0.5rem;
+    }
+
+    .socials__link {
+        font-size: 0.55rem;
+    }
 }

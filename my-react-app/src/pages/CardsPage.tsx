@@ -3,7 +3,11 @@ import { CardList } from '../components/CardList/CardList';
 import '../assets/styles/SectionReviews.css';
 import '../assets/styles/Container.css';
 
-export const CardsPage = () => {
+interface CardsPageProps {
+  openModal: (modalId: string) => void;
+}
+
+export const CardsPage = ({ openModal }: CardsPageProps) => {
   const [searchParams] = useSearchParams();
   const limit = parseInt(searchParams.get('limit') || '4', 10);
 
@@ -11,13 +15,17 @@ export const CardsPage = () => {
     <section className="section-reviews">
       <div className="container">
         <h2 className="container__slogan">
-          What <span className="slogan_colored">creators</span> are saying about Splice
+          Отзывы <span className="slogan_colored">путешественников</span> о нас
         </h2>
         <p className="container__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Augue tellus urna, mi velit diam.
-          Turpis diam amet massa id.
+          Прочтите вдохновляющие истории дайверов, которые пережили волшебство плавания с китами в бескрайних просторах океана. Их эмоции и впечатления раскроют, почему это приключение незабываемо!
         </p>
-        <button className="container__button">TRY IT NOW</button>
+        <button
+          className="container__button"
+          onClick={() => openModal('reg-modal')}
+        >
+          ЗАБРОНИРОВАТЬ СЕЙЧАС
+        </button>
       </div>
       <img
         src="/images/reviews_img.png"

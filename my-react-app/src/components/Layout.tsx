@@ -1,19 +1,19 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from './Header/Header';
-import { Modal } from './Modal/Modal';
+import { RegModal } from './RegModal/RegModal';
 import { Footer } from './Footer/Footer';
 
 interface LayoutProps {
   isModalOpen: boolean;
-  openModal: () => void;
-  closeModal: () => void;
+  openModal: (modalId: string) => void;
+  closeModal: (modalId: string) => void;
 }
 
 export const Layout = ({ isModalOpen, openModal, closeModal }: LayoutProps) => {
   return (
     <>
-      <Header openModal={openModal} />
-      <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
+      <Header openModal={() => openModal('reg-modal')} />
+      <RegModal isModalOpen={isModalOpen} closeModal={() => closeModal('reg-modal')} />
       <main>
         <Outlet />
       </main>
